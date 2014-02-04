@@ -48,6 +48,36 @@
                         
                         <b>L&auml;nkar</b> <br /> <br />
                         TODO l&auml;gg till l&auml;nkar
+                        <ul id="linkz">
+                            <li>Sparql4Beginners @https://code.google.com/p/tdwg-rdf/wiki/Beginners6SPARQL#6.2._Public_SPARQL_interfaces</li>
+                            <li>Ping Pong @https://pingpong.chalmers.se</li>
+                            <li>Latex intro @http://ctan.uib.no/info/lshort/english/lshort.pdf</li>
+                            <li>GF @http://www.grammaticalframework.org/</li>
+                            <li>Scrumguiden @https://www.scrum.org/Portals/0/Documents/Scrum%20Guides/2013/Scrum-Guide-SE.pdf#zoom=100</li>
+                            <li>Github @https://github.com/Annoa/kandidat-32</li>
+                            
+                        </ul>
+                        <script type="text/javascript">
+                            var lnks = document.getElementById("linkz").getElementsByTagName("li");
+                            for (var i = 0, len = lnks.length; i < len; i++) {
+                            
+                                var tarray = lnks[i].textContent.split("@");
+                                
+                                var desc = tarray[0];
+                                var href = tarray[1].trim();
+                                
+                                lnks[i].textContent = "";
+                                
+                                var a = document.createElement("a");
+                                
+                                a.setAttribute("href", href);
+                                a.setAttribute("target", "_blank");
+                                
+                                a.textContent = desc;
+                                
+                                lnks[i].appendChild(a);
+                            }
+                        </script>
                         </td>
                     </tr>   
                 </table>
