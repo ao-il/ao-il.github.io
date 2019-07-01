@@ -1,0 +1,34 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="author" content="Amadin Ileso">
+      <title></title>
+      <script>
+        
+        var seconds = 0;
+        var counter = 0;
+
+        var fnct = setInterval(function(){
+          
+          seconds = seconds + 1;
+          counter = counter + 1;
+
+          if (counter >= 60 ) { counter = 0; }
+          
+          document.title = "Time " + Math.floor(seconds/60) + ":" + counter;
+          document.getElementById("lbl").innerHTML = document.title;
+        
+        }, 1000);
+
+      </script> 
+  </head>
+
+  <body style="width:600px; height:600px; border:1px solid; padding:50px; background-color: blue; text-align: center; color:#ffffff; font-size: 24px; font-family:Arial" onclick="clearInterval(fnct)">
+  	Click anywhere within the border to stop the timer. Press f5 to refresh the page and restart the timer.
+        <p id="lbl" style="font-size: 50px;"> </p>
+  </body>
+</html>
+
+
